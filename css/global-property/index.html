@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全局属性</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .css-initial {
+            font-size: initial !important;
+            padding: 10px;
+            width: 33%;
+        }
+
+        .css-unset {
+            all: unset;
+            font-size: unset;
+            padding: 10px;
+            width: 33%;
+        }
+
+        .css-testing {
+            color: red;
+            font-size: 12px;
+            border: 1px solid #eee;
+            padding: 10px;
+            width: 33%;
+        }
+
+        .css-testing h2 {
+            color: purple;
+            font-size: 40px;
+        }
+
+        div h2.initial {
+            font-size: initial;
+        }
+
+        div h2.inherit {
+            font-size: inherit;
+        }
+
+        div h2.inherit small {
+            font-size: 20px;
+
+        }
+
+        div h2.inherit small em {
+            font-size: inherit;
+        }
+
+        div h2.unset {
+            font-size: unset;
+        }
+
+        div h2.revert {
+            font-size: revert;
+        }
+
+        div h2.all {
+            all: unset;
+        }
+    </style>
+</head>
+<body>
+<div class="flex">
+    <div class="css-initial">
+        <p>initial 示例</p>
+        <p>initial: 用户初始值, 在这里 h2 的字体大小是 1.5rem, 因为这里的字体大小是基于浏览器, 所以计算出来是 16+8 = 24px</p>
+        <p>通过修改浏览器字体大小, 这里的值也会变动</p>
+        <h2>H2 初始值</h2>
+    </div>
+    <div class="css-unset">
+        <p> unset value sample</p>
+        <p>unset : 用户代理(user agent 默认值), 这里是浏览器的默认样式</p>
+        <p>通过修改浏览器字体大小, 这里的值也会变动</p>
+        <h2>H2 初始值</h2>
+    </div>
+    <div class="css-testing">
+        <p>全局示例</p>
+        当前框内默认 12px/red
+        <h2>h2 紫色/40px</h2>
+        <h2 class="initial">H2 标题 size:initial</h2>
+        <p>?谁能解释下这里 init 的值为什么是 16px</p>
+        <h2 class="inherit">H2 标题 /Inherit <small>SMALL <em>EM</em></small></h2>
+        <p>inherit 继承最近的父元素的属性内容</p>
+        <h2 class="unset">H2 标题 /unset</h2>
+        <p>unset 首先设置为 inherit value, 如果没有, 设置为 initial value</p>
+        <h2 class="revert">H2 标题 /revert:重置为 user-agent 默认样式</h2>
+        <p>重置为浏览器默认样式</p>
+    </div>
+</div>
+</body>
+</html>
