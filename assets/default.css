@@ -1,0 +1,17 @@
+.wuli-blk-blue {
+    background: rgb(43, 153, 225, 0.2);
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.wuli-blk-lightblue {
+    background: rgb(52, 183, 255, 0.1);
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.wuli-blk-green {
+    background: rgb(48, 192, 153);
+    padding: 4px;
+    box-sizing: border-box;
+}

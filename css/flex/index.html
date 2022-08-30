@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <link rel="stylesheet" href="../../assets/default.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        .flex {
+            display: flex;
+        }
+        .side {
+            width: 200px;
+        }
+        .main {
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+<h3>Main 区域自适应宽度</h3>
+<div class="flex wuli-blk-lightblue">
+    <div class="wuli-blk-blue side">
+        Side
+    </div>
+    <div class="main wuli-blk-green">
+        Main
+    </div>
+</div>
+</body>
+</html>
