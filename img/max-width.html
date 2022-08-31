@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/default.css">
     <style>
-        .max img {
+        .max img.percent {
+            max-width: 100% !important;
+            height: 100% !important;
+        }
+        .max img.auto {
             max-width: 100% !important;
             height: auto !important;
         }
@@ -22,7 +26,12 @@
             <div class="wuli-blk-lightblue mt-2">
                 <p>图片最大宽度是 100%, 在规定了图片的 width 和 height 之后也可以自适应</p>
                 <div class="max">
-                    <img src="https://start.wulicode.com/img/1920x1080/宽度自适应" alt="最大宽度" style="width:1400px;height: 900px;">
+                    <p>高度 100%</p>
+                    <img class="percent" src="https://start.wulicode.com/img/1920x1080/宽度自适应" alt="最大宽度" style="width:1400px;height: 900px;">
+                </div>
+                <div class="max mt-2">
+                    <p>高度 auto</p>
+                    <img class="auto" src="https://start.wulicode.com/img/1920x1080/宽度自适应" alt="最大宽度" style="width:1400px;height: 900px;">
                 </div>
             </div>
         </div>
