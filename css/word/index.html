@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>强制换行</title>
+    <link rel="stylesheet" href="../../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/default.css">
+    <style>
+        .ch {
+
+        }
+
+        .en-break {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>强制换行</h2>
+    <div class="row gx-4">
+        <div class="col-6">
+            <div class="wuli-blk-lightblue mt-2">
+                <p>默认的中文布局方式</p>
+                <div class="ch">
+                    如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem
+                    Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem
+                    Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem
+                    Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="wuli-blk-lightblue mt-2">
+                <p>默认的英文文布局方式</p>
+                <div class="en">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                    since
+                    the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries,
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="wuli-blk-lightblue mt-2">
+                <p>英文, 存在特殊的字符长度, 宽度低于最长宽度情况下文本会溢出</p>
+                <div>
+                    LoremIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsum is simply dummy text of the printingprintingprintingprintingprintingprintingprinting
+                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries,
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="wuli-blk-lightblue mt-2">
+                <p>英文, 存在特殊长度(word-break:break-all)</p>
+                <div class="en-break">
+                    LoremIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsumIpsum is simply dummy text of the printingprintingprintingprintingprintingprintingprinting
+                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries,
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
