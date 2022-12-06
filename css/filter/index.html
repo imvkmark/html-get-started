@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>灰度模式</title>
+    <link rel="stylesheet" href="../../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/default.css">
+    <style>
+    .grey {
+        filter: grayscale(100%);
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>灰色</h2>
+    <div class="row gx-4">
+        <div class="col-6">
+            <div class="alert alert-danger">警告</div>
+            <div class="alert alert-danger grey">警告</div>
+        </div>
+        <div class="col-6">
+            <img alt="logo" src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg"/>
+            <img class="grey" alt="logo" src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg"/>
+        </div>
+        <div class="col-6">
+            <img alt="logo" src="https://www.baidu.com/img/flexible/logo/pc/index.png"/>
+            <img class="grey" alt="logo" src="https://www.baidu.com/img/flexible/logo/pc/index.png"/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
