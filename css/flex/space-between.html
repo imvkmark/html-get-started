@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <link rel="stylesheet" href="../../assets/default.css">
+    <style>
+    html, body {
+        margin: 0;
+        height: 100%;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+    }
+
+    .description {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 1px solid #ccc;
+        background: rgba(0, 0, 0, 0.3);
+        font-family: monospace;
+    }
+    </style>
+    <script>
+    function addContent() {
+        let top = document.getElementById('top');
+        top.innerHTML = top.innerHTML + '<br>' + 'Top'
+    }
+    </script>
+</head>
+<body>
+<div class="description">
+    Main 在 Top 高度可变的时候永远居于底部
+</div>
+<div class="flex wuli-blk-lightblue">
+    <div class="wuli-blk-blue top" id="top">
+        <button onclick="addContent()">添加内容</button>
+        Top
+    </div>
+    <div class="main wuli-blk-green">
+        Bottom
+    </div>
+</div>
+</body>
+</html>
