@@ -1,0 +1,12 @@
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"></script>
+<button id="test"> getAuthCode</button>
+<script>
+document.querySelector('#test').addEventListener('click', function () {
+    ap.getAuthCode({
+        appId: '2021003175607367',
+        scopes: ['auth_user'],
+    }, function (res) {
+        ap.alert(JSON.stringify(res));
+    });
+});
+</script>
