@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无来源进行图片访问</title>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/default.css">
+    <style>
+    .max img.percent {
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .max img.auto {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>无来源进行图片访问</h2>
+    <div class="row gx-4">
+        <div class="col">
+            <div class="wuli-blk-lightblue mt-2">
+                <div class="max">
+                    <p>七牛的图片, 有来源限制, 默认不允许访问</p>
+                    <img class="percent" src="http://dn-odum9helk.qbox.me/resource/gogopher.jpg" alt="最大宽度">
+                </div>
+                <div class="max mt-2">
+                    <p>设置 <code>referrerpolicy="no-referrer"</code>, 可以访问图片, 因为是同一张图片, 所以加了参数</p>
+                    <img class="auto" referrerpolicy="no-referrer" src="http://dn-odum9helk.qbox.me/resource/gogopher.jpg?imageView2/1/w/200/h/200" alt="无 Referer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
