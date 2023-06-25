@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Storage 大小设定</title>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/default.css">
+    <style>
+    .max img.percent {
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .max img.auto {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>设置 session storage 的最大限制</h2>
+    <div class="row gx-4">
+        <div class="col">
+            <div class="wuli-blk-lightblue mt-2">
+                <div class="max">
+                    <p id="agent"></p>
+                </div>
+                <div class="max mt-2">
+                    <p id="result"></p>
+                    <p id="max"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('agent').innerHTML = window.navigator.userAgent;
+
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        counter += 1;
+    }
+    return result;
+}
+
+
+// noinspection JSAnnotator
+
+
+window.onload = function () {
+    let i = 1;
+    let doTest = setInterval(function () {
+        try {
+            sessionStorage.setItem('test', makeid(i * 100000));
+            document.getElementById('result').innerHTML = 'write ' + (i * 100000) + ' chars';
+            i++;
+        } catch (e) {
+            clearInterval(doTest);
+            document.getElementById('max').innerHTML = (e.message) + ': write ' + (i * 100000) + ' chars failed';
+        }
+    }, 50)
+}
+</script>
+
+</body>
+</html>
