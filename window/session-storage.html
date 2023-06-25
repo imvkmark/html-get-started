@@ -7,17 +7,6 @@
     <title>Session Storage 大小设定</title>
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/default.css">
-    <style>
-    .max img.percent {
-        max-width: 100% !important;
-        height: 100% !important;
-    }
-
-    .max img.auto {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -31,6 +20,8 @@
                 <div class="max mt-2">
                     <p id="result"></p>
                     <p id="max"></p>
+                    <p id="storage-result"></p>
+                    <p id="storage-max"></p>
                 </div>
             </div>
         </div>
@@ -66,6 +57,18 @@ window.onload = function () {
         } catch (e) {
             clearInterval(doTest);
             document.getElementById('max').innerHTML = (e.message) + ': write ' + (i * 100000) + ' chars failed';
+        }
+    }, 50)
+
+    let j = 1;
+    let doStorageTest = setInterval(function () {
+        try {
+            localStorage.setItem('test-storage', makeid(j * 100000));
+            document.getElementById('storage-result').innerHTML = 'write ' + (j * 100000) + ' chars';
+            j++;
+        } catch (e) {
+            clearInterval(doStorageTest);
+            document.getElementById('storage-max').innerHTML = (e.message) + ': write ' + (j * 100000) + ' chars failed';
         }
     }, 50)
 }
