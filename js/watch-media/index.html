@@ -12,9 +12,13 @@
 <p id="content"></p>
 <script>
 
+const isBrowserStandalone = () => {
+    return window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches
+}
+
 function standalone() {
     const content = document.querySelector('#content');
-    content.textContent = JSON.stringify(window.matchMedia('(display-mode: standalone)'))
+    content.textContent = isBrowserStandalone() ? 'Y' : 'N'
 }
 
 document.querySelector('#queryMediaStandalone').addEventListener('click', standalone);
