@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Watch Media</title>
     <link rel="stylesheet" href="../../assets/default.css">
-    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-    <script>
-    // VConsole will be exported to `window.VConsole` by default.
-    var vConsole = new window.VConsole();
-    </script>
 </head>
 <body>
-    vConsole
+<button id="queryMediaStandalone">QueryMedia:Standalone</button>
+<p id="content"></p>
+<script>
+
+function standalone() {
+    const content = document.querySelector('#content');
+    content.textContent = JSON.stringify(window.matchMedia('(display-mode: standalone)'))
+}
+
+document.querySelector('#queryMediaStandalone').addEventListener('click', standalone);
+</script>
 </body>
 </html>
