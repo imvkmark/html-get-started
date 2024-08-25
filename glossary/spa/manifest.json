@@ -1,6 +1,6 @@
 {
-    "manifest_version": 2,
     "name": "PWA | html-get-started@wulicode",
+    "short_name": "PWA",
     "version": "1.0",
     "description": "一个测试的PWA 应用",
     "icons": [
