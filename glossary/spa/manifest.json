@@ -10,5 +10,6 @@
             "type": "image/png"
         }
     ],
+    "display": "minimal-ui",
     "start_url": "https://html.gs.wulicode.com/glossary/spa/"
 }
