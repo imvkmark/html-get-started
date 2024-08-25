@@ -3,8 +3,12 @@
     "name": "PWA | html-get-started@wulicode",
     "version": "1.0",
     "description": "一个测试的PWA 应用",
-    "icons": {
-        "256": "../../assets/icon/favicon-256.png"
-    },
-    "start_url": "https://html.gs.wulicode.com/glossary/spa"
+    "icons": [
+        {
+            "src": "../../assets/icon/favicon-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "https://html.gs.wulicode.com/glossary/spa/"
 }
