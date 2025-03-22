@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> OSS 图片列表</title>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/default.css">
+    <style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+<h2>不同大小的图片在 OSS 中的缩略对比</h2>
+<ul>
+    <li>
+        <img src="https://file.kejinshou.com/facades/goods_62yNN11AAyx8.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_335/quality,q_90/format,jpg"
+            alt="图片">
+        <br> 宽度 335
+    </li>
+    <li>
+        <img src="https://file.kejinshou.com/facades/goods_62yNN11AAyx8.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_670/quality,q_90/format,jpg"
+            alt="图片 ">
+        <br> 宽度 670
+    </li>
+    <li>
+        <img src="https://file.kejinshou.com/facades/goods_62yNN11AAyx8.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1005/quality,q_90/format,jpg"
+            alt="图片 300x300">
+        <br> 宽度 1005
+    </li>
+    <li>
+        <img src="https://file.kejinshou.com/facades/goods_62yNN11AAyx8.png?x-oss-process=image/auto-orient,1/quality,q_90/format,jpg" alt="图片 400x400">
+        <br> 宽度 1260
+    </li>
+</ul>
+</body>
+</html>
